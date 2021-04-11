@@ -5,90 +5,335 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2021年折腾记录</title>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        .home {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .content {
+            perspective: 340px;
+            width: 100%;
+            position: relative;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+        }
+
+        span {
+            display: block;
+            text-align: center;
+        }
+
+        .stars {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 2px;
+            height: 2px;
+            z-index: 999;
+            border-radius: 50%;
+            box-shadow: -447px 387px #c4c4c4, -401px 118px #fafafa, -109px 217px #d9d9d9, -680px -436px #e3e3e3, 514px 360px #cccccc, -708px 298px #e8e8e8, -696px -270px #ededed, 116px -128px #f7f7f7, 179px 35px white, -404px -90px whitesmoke, -331px -309px #c4c4c4, -363px -24px #d1d1d1, 277px 416px #fafafa, -145px -244px whitesmoke, 123px 62px #d4d4d4, -407px 418px #d9d9d9, 535px 237px #d9d9d9, -466px -78px #f7f7f7, 257px 287px #dedede, 327px -398px #e0e0e0, -602px -38px #c2c2c2, 128px 398px #e6e6e6, 274px -446px #d1d1d1, -602px -298px #c7c7c7, 526px -5px #c4c4c4, -90px -158px #fcfcfc, 5px 294px whitesmoke, -633px 229px #c4c4c4, -475px 427px #dedede, 586px -453px #f2f2f2, 180px -432px #c7c7c7, -637px -88px #cfcfcf, -453px 308px #d6d6d6, -111px 1px #d9d9d9, 573px -450px #ededed, 198px 300px #d6d6d6, -355px 166px #dedede, -715px 13px #e3e3e3, 262px -104px #d1d1d1, 147px 325px #dbdbdb, 1px 399px #dbdbdb, 286px -100px white, 43px -329px #e8e8e8, 617px 55px #d9d9d9, -168px -392px #cccccc, 84px 219px #c9c9c9, 507px -226px #d9d9d9, -327px -70px #e6e6e6, 386px -212px #c4c4c4, -717px 4px #cfcfcf, 502px -231px #e3e3e3, 302px 56px #ededed, 649px 341px #c7c7c7, 569px 350px #c9c9c9, 516px -31px #e6e6e6, 689px 447px #c2c2c2, 591px -206px #fafafa, 422px -137px #e6e6e6, -510px -324px #cccccc, -649px 287px #c2c2c2, -194px -48px #f7f7f7, -279px -329px #d1d1d1, -406px 478px #dbdbdb, -735px -87px #c9c9c9, 30px -197px #dedede, -564px 233px #e6e6e6, -486px -324px #ededed, -54px -7px #ededed, -441px -194px #e3e3e3, -133px -95px #e0e0e0, -722px -73px #d6d6d6, 595px 423px #ededed, 568px -39px #ededed, 370px 377px #d1d1d1, -419px -102px #fcfcfc, -450px 109px #c4c4c4, -57px -119px #d1d1d1, -582px 150px #e6e6e6, 206px -263px #cfcfcf, 582px -461px #c9c9c9, -268px -141px #d9d9d9, -148px 291px #c7c7c7, 254px -179px #c9c9c9, 725px 424px #f0f0f0, 391px -150px #ebebeb, 89px -299px #d4d4d4, 170px 1px #c9c9c9, 243px 209px #c7c7c7, 27px 460px #c9c9c9, -465px -380px #d4d4d4, 530px -360px whitesmoke, -626px 53px #e0e0e0, 706px 218px #d9d9d9, 40px -82px #cccccc, -5px -212px #e6e6e6, -742px 33px #ebebeb, -714px 478px #e0e0e0, -585px -125px #cccccc, -216px 348px #cfcfcf, 601px 332px #ededed, 344px -88px #c4c4c4, 659px -22px #d1d1d1, -411px 188px #d6d6d6, -423px -206px #fcfcfc, -359px -136px #cfcfcf, 612px 406px whitesmoke, 725px 96px whitesmoke, 363px -446px white, -204px 325px #c9c9c9, 740px 176px #fafafa, -489px -352px white, -638px 64px #dbdbdb, 537px -65px #dbdbdb, 151px -32px #ebebeb, 681px 212px #fcfcfc, 604px -149px #e6e6e6, -542px -398px #c4c4c4, -707px 66px whitesmoke, -381px 258px #cfcfcf, -30px 332px #d6d6d6, 512px -381px #c9c9c9, 195px 288px #cccccc, -278px 479px #c7c7c7, 27px -208px #d6d6d6, -288px 15px white, -680px 248px #dedede, 433px 31px #c9c9c9, 150px -206px #d4d4d4, -79px 247px white, -594px 115px #e0e0e0, 99px 292px #e0e0e0, 673px -269px #dedede, -257px -64px #d1d1d1, 449px 81px #f2f2f2, 18px -99px #d1d1d1, -694px 415px #f7f7f7, 240px 264px #e0e0e0, 450px -172px white, 383px 7px #e8e8e8, 338px -73px #c9c9c9, 291px -19px #ebebeb, 659px 137px #d1d1d1, 602px -6px #fcfcfc, 554px 249px #ebebeb, 625px 356px #d9d9d9, 579px -183px #d6d6d6, -20px 250px white, -401px 431px #c4c4c4, -645px -232px #cccccc, -265px -148px white, 553px 258px #d1d1d1, 166px -360px #ebebeb, 719px 51px #ededed, 612px -129px #ebebeb, -465px -104px #f2f2f2, -154px -121px #d9d9d9, -1px 330px #f2f2f2, -666px 248px #f7f7f7, -720px 264px #ededed, 148px -365px #e6e6e6, -388px -349px #c4c4c4, 128px -88px #e3e3e3, -683px -274px #fafafa, -341px 41px #c9c9c9, -59px -471px #f0f0f0, -3px -427px #c2c2c2, 418px 167px #d6d6d6, 343px 247px #c7c7c7, 623px -347px #d1d1d1, 716px -217px white, 243px -409px whitesmoke, -75px -126px #d6d6d6, -730px -91px #c9c9c9, -210px -397px #cfcfcf, -349px 180px #c9c9c9, -567px -281px #e0e0e0, -460px 381px #fcfcfc, -310px -22px #ededed, 450px -1px #dbdbdb, -405px -328px #e3e3e3, 5px 332px #d6d6d6, -294px 302px #fcfcfc, -398px 97px whitesmoke, -696px 325px #cfcfcf, -589px 110px #d6d6d6, 353px -411px #dbdbdb, -697px -318px #ebebeb, -114px -72px #f0f0f0, 259px -193px #fcfcfc, 60px 26px #e6e6e6, -63px -232px white, 205px -372px #f7f7f7, -464px -333px #f2f2f2, -374px 123px white, -377px -386px #c7c7c7, -80px 337px #cccccc, 478px -178px #dbdbdb, 222px 420px #ebebeb, -707px 99px #c4c4c4, 716px -132px #fafafa, -253px -286px #e3e3e3, 646px 178px #f0f0f0, 201px 24px #d1d1d1, 178px -58px #c7c7c7, -557px 368px #ededed, 0px 219px #d9d9d9, -266px -269px #cccccc, 242px -197px #c9c9c9, -419px 193px #c2c2c2, -47px 91px #c7c7c7, -109px 75px #c2c2c2, -146px -453px #d6d6d6, 671px -350px #f2f2f2, 421px -91px #d9d9d9, 738px 19px #ededed, -316px -155px #dedede, 419px 244px #fcfcfc, -278px -418px #d6d6d6, -581px -181px #fcfcfc, 139px 264px #d9d9d9, 691px -11px #ebebeb, -622px 402px #c2c2c2, 219px 396px #f0f0f0, -149px -423px white, -716px -78px #d9d9d9, -590px 341px #e6e6e6, -208px 79px #d6d6d6, -227px -24px #f7f7f7, 239px 262px #d1d1d1, 740px 443px #f7f7f7, 509px 134px #d6d6d6, -555px 232px #e8e8e8, -67px -427px #cfcfcf, -368px 250px #f7f7f7, 715px -415px #fafafa, 411px -301px #f0f0f0, -322px 287px #d9d9d9, -429px -90px #f2f2f2, -327px -387px #f0f0f0, -491px 183px #c2c2c2, -133px 250px #d4d4d4, 538px 139px #e3e3e3, -417px -125px #f0f0f0, 653px -351px #e6e6e6, -549px 38px #d4d4d4, 602px 110px whitesmoke, 415px 105px #e0e0e0, -733px -371px #cfcfcf, 286px 403px #d4d4d4, 11px 320px #c4c4c4, -597px 158px whitesmoke, 716px -350px whitesmoke, 321px 67px #fafafa, -237px -300px #cfcfcf, 74px 152px #c9c9c9, 587px -123px #fcfcfc, 699px -332px whitesmoke, 399px 355px #f7f7f7, -323px 314px #dbdbdb, 89px 416px #c7c7c7, 445px 38px #e3e3e3, 572px 122px #c4c4c4, -258px 372px white, 49px 306px #d9d9d9, 437px -35px #dedede, 566px 174px #f2f2f2, 732px -299px whitesmoke, -410px 394px #ededed, 131px -415px white, 19px -326px #e8e8e8, -700px -188px #d1d1d1, 96px -1px #e0e0e0, -328px -396px #f0f0f0, -117px -214px #fcfcfc, -53px 261px #ebebeb, 80px 134px #d6d6d6, -364px -216px white, -636px -125px #dbdbdb, -639px -265px #e3e3e3, 208px 98px #c7c7c7, 172px 467px #e0e0e0, 435px 309px #e3e3e3, 194px -259px #f0f0f0, 209px -186px #c9c9c9, -312px 418px #fafafa, 229px 407px #c9c9c9, -449px -357px #fafafa, 674px 121px #e8e8e8, 608px -429px #ebebeb, -431px -428px #cfcfcf, 105px 462px #e3e3e3, -179px -372px #e3e3e3, 143px -317px #d6d6d6, -449px -149px #fafafa, -544px 250px #dedede, -220px -323px whitesmoke, 658px 8px whitesmoke, -656px -244px #e8e8e8, 347px 11px whitesmoke, 694px -230px #f7f7f7, -317px 1px #c4c4c4, 28px 23px #fcfcfc, -382px 321px #dbdbdb, 632px -74px #c4c4c4, 154px -245px #c2c2c2, -553px 337px #d6d6d6, -48px -243px #d1d1d1, 92px -391px #cccccc, -71px -256px #cfcfcf, -372px 57px #d9d9d9, 369px -140px #fcfcfc, 675px 81px #c2c2c2, -663px 254px #cccccc, 703px -203px #ededed, 74px -363px #c2c2c2, 643px -458px #d1d1d1, 198px 359px #cccccc, 265px 309px #d4d4d4, -353px -368px #e8e8e8, -465px 439px whitesmoke, 693px 360px #c9c9c9, 634px -397px #d1d1d1, 467px 25px whitesmoke, -558px -272px #e6e6e6, 671px 69px #dbdbdb, 407px 357px #cfcfcf, 379px 80px white, 10px -203px #c9c9c9, 104px -292px #f0f0f0, -667px -29px #d1d1d1, 557px -155px #e6e6e6, -505px 115px #cfcfcf, -605px 164px #f2f2f2, -108px -223px #e0e0e0, 523px -156px #ebebeb, 691px 230px white, -507px -13px #d1d1d1, -349px 332px #dedede, 520px 266px whitesmoke, -66px -250px #e6e6e6, -496px -449px #ebebeb, 414px -170px #dedede, -649px 230px #ebebeb, 598px -92px #c7c7c7, -638px 113px #c2c2c2, 151px 363px #f7f7f7, -445px -241px #f0f0f0, 527px -14px #dedede, 203px -61px #cfcfcf, -716px -284px #ebebeb, -525px 134px #c2c2c2;
+            animation: fly 15s linear infinite;
+            transform-style: preserve-3d;
+        }
+
+        .stars:before,
+        .stars:after {
+            content: "";
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            box-shadow: inherit;
+        }
+
+        .stars:before {
+            transform: translateZ(-300px);
+            opacity: .6;
+        }
+
+        .stars:after {
+            transform: translateZ(-600px);
+            opacity: .4;
+        }
+
+        @keyframes fly {
+            from {
+                transform: translateZ(0px);
+                opacity: .6;
+            }
+
+            to {
+                transform: translateZ(200px);
+                opacity: .8;
+            }
+        }
+
+        .title {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            left: 0;
+            right: 0;
+            top: 300px;
+            margin: auto;
+            bottom: 0;
+            color: #fff;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .titles {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            left: 0;
+            right: 0;
+            top: 350px;
+            margin: auto;
+            bottom: 0;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .icon {
+            width: 15px;
+            height: 15px;
+            padding: 5px;
+            border: 2px solid #fff;
+            border-radius: 100%;
+            position: absolute;
+            left: 49%;
+            bottom: 50px;
+            animation: downs 2s linear infinite;
+        }
+
+        @keyframes downs {
+            from {
+                transform: translatey(0px);
+                opacity: .6;
+            }
+
+            to {
+                transform: translatey(30px);
+                opacity: .8;
+            }
+        }
+
+        .ribbon {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            right: 300px;
+            top: 50px;
+            margin: auto;
+        }
+
+        .ribbon:after,
+        .ribbon:before {
+            margin-top: 0.5em;
+            content: "";
+            display: flex;
+            ;
+            border: 1.5em solid #fff;
+        }
+
+        .ribbon:after {
+            border-right-color: transparent;
+        }
+
+        .ribbon:before {
+            border-left-color: transparent;
+        }
+
+        .ribbon a:link,
+        .ribbon a:visited {
+            color: #000;
+            text-decoration: none;
+            height: 3.5em;
+            overflow: hidden;
+        }
+
+        .ribbon span {
+            background: #fff;
+            display: inline-block;
+            line-height: 3em;
+            padding: 0 1.5em;
+            margin-top: 0.5em;
+            position: relative;
+            -webkit-transition: background-color 0.2s, margin-top 0.2s;
+            /* Saf3.2+, Chrome */
+            -moz-transition: background-color 0.2s, margin-top 0.2s;
+            /* FF4+ */
+            -ms-transition: background-color 0.2s, margin-top 0.2s;
+            /* IE10 */
+            -o-transition: background-color 0.2s, margin-top 0.2s;
+            /* Opera 10.5+ */
+            transition: background-color 0.2s, margin-top 0.2s;
+        }
+
+        .ribbon a:hover span {
+            background: #FFD204;
+            margin-top: 0;
+        }
+
+        .ribbon span:before {
+            content: "";
+            position: absolute;
+            top: 3em;
+            left: 0;
+            border-right: 0.5em solid #9B8651;
+            border-bottom: 0.5em solid #fff;
+        }
+
+        .ribbon span:after {
+            content: "";
+            position: absolute;
+            top: 3em;
+            right: 0;
+            border-left: 0.5em solid #9B8651;
+            border-bottom: 0.5em solid #fff;
+        }
+
+        .introduce {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .introduce_item {
+            display: flex;
+            justify-content: center;
+            margin-top: 60px;
+        }
+
+        .introduce_item_img {
+            width: 800px;
+            height: 500px;
+        }
+
+        .introduce_item_title {
+            width: 300px;
+            font-size: 18px;
+            line-height: 36px;
+            align-self: center;
+            padding-left: 100px;
+        }
+
+        .introduce_item_titles {
+            width: 300px;
+            font-size: 18px;
+            line-height: 36px;
+            align-self: center;
+            padding-right: 100px;
+        }
+
+        audio {
+            position: fixed;
+            bottom: 50px;
+            right: 0;
+        }
+
+        .music_img {
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            width: 40px;
+            height: 30px;
+            animation: muscis 5s linear infinite;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 400px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .icons_items {
+            display: flex;
+            flex-direction: column;
+            font-size: 20px;
+            margin-top: 80px;
+            width: 200px;
+        }
+
+        .icons_items_imgs {
+            width: 200px;
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1 id="2021-">2021年折腾记录</h1>
-    <p>自<font color=red>疫情</font>蔓延以来，在家维持赋闲的状态已经超过一年。</p>
-    <p>闲着也是闲着，人一闲下来就容易惹是生非，捣鼓各种过去从来不会捣鼓的东西。</p>
-    <p>开年以来，把买了好久也没有看过的《C Primer Plus》拿出来读，配合中文版的PDF对照着看，看到诘屈聱牙的地方就回英文纸质版上找原文比对。发现了翻译版中的许多错误，讶异出版社的校对工作竟如此粗心。</p>
-    <p>不过C语言还是挺有意思，越学越有乐趣。尤其是在Python宣布自3.9的版本不再能够运行于Windows 7之后，更加觉得还是得用一下C这样对平台依赖没有那么大的语言来写自己的代码。</p>
-    <p>我对Windows 10本来也没有什么不满，但是它并不能支持我最喜欢的拼音加加，严重影响我中文的录入速度与准确性。只好为了中文而特意准备了一台计算机专门运行Windows 7。</p>
-    <p>之前为了打游戏买的最便宜的巧克力键盘键位实在是奇葩，加上手感不良，于是就又加了50％的预算买了一个新的标准键位的薄膜键盘，录入效率与正确率飞升。</p>
-    <p>也不能老是学习，偶尔也看看B站上的番剧，玩玩Steam上好早以前低价买了又一直没碰过的游戏。</p>
-    <p>通关了《Clannad》和《Tomoyo After ～It&#39;s a Wonderful
-        Life～》，后者Steam上只有英文版，但是B站上有Up主上传了中文的视频，所以开两个窗口，一边玩英文版，一边看B站的视频来阅读中文的剧情。</p>
-    <p>我倒也不是读不懂英文，实在是觉得日式Galgame的剧情的精髓在于文本，而同为东方国家，很多只有东方国家的人才能懂的心情，翻译成英文之后就丧失殆尽，根本无法有效地表达人物的情感。</p>
-    <p>当然后来又在3DM上找到了汉化版的《智代アフター ～It&#39;s a Wonderful Life～》，用虚拟机把它从3DM的壳里面解压出来，拷贝到计算机里面运行。入了正版玩盗版，也很无奈啊。</p>
-    <p>又接触了《Steins;Gate》，习惯了它独特的画风之后，也喜欢上了它的剧情。</p>
-    <p>而它的后续的许多衍生作品，Steam上要么没有引进，要么只有英文版。好在万能的B站上有一些神通广大的Up主上传了各个衍生作品的视频，可以让我得以当一个云玩家。</p>
-    <p>不得不说这两作都是制作精良的催泪神作，无愧于它们的豆瓣评分，十分令人感动。</p>
-    <p>还在一个<a
-            href="https://keymusicboxode.blogspot.com/">神奇的西班牙语的Blogger网站</a>上找到了Key社的全部OST的专辑下载.虽然下载解压缩之后，发现里面还夹着VeryCD分享计划的txt文档。真有一种考古出土文物的错觉。
-    </p>
-    <p>学习之余，重新整理我的硬盘，把过去的数据重新分类整理，发现GoPro录制的视频太大，就萌生了把它们重新压制，减小体积，减轻硬盘存储压力的念头。</p>
-    <p>在这个过程中，学到了一些powershell和FFmpeg的知识，还了解了编码器的发展现状，与使用Nvidia和Intel的显卡相关硬解压的简单操作。</p>
-    <p>在调整参数的过程中，意外发现我的显卡色彩范围一直都是Limit RGB，了解了相关的知识之后，还意外发现了Dell的显示器会在Nvidia与Intel的显卡设置中被识别为数字电视，是导致被自动识别为Limit RGB的元凶。
-    </p>
-    <p>经过一番学习，推测问题是出在显示器的EDID上，尽管我用的是Dell
-        U2417h自带的而且N卡也好，I卡也好，都会好心的帮你自动识别显示器的类别，以确定是显示器还是电视。尝试修改EDID未果，我的显示器依然被识别为电视，心塞。
-    </p>
-    <p>都2021年了，为什么N卡也好，I卡也好，就不能出一个简单的选项，让用户自己来选择显示设备的类型呢，我自己亲自动手连接的显示器难道我还不清楚它究竟是电脑显示器还是电视吗？</p>
-    <p>这些问题其实也有用户在厂家的论坛里反映，但是很多时候厂家都是置若罔闻，非不能也，乃不为也。</p>
-    <p>好在近年来不管是I卡还是N卡都给了大家一个曲线救国的方案，允许把色彩范围手动调整为Full RGB。保存重启之后，又试着把显示器调整为sRGB模式，发现显示器的色彩发生了很大的变化，需要一些时间来重新适应。</p>
-    <p>既然显示器色彩调整了，就顺手把亮度和对比度也校正了一下，感觉这么多年一直都是错误地使用计算机，有点白瞎了在设备上投资的金钱。</p>
-    <p>另一个烦心事是我的Lenovo Thinkcentre M900 Tiny，这台计算机就是上文所提到的为了拼音加加和中文录入而特意购置的。</p>
-    <p>自我买回来，就一直有各种各样的小问题。其中升级到BIOS的一个版本后会经常性遭遇蓝屏与死机。</p>
-    <p>回滚到FWKTACA版本之后稳定了一段时间。</p>
-    <p>去年Black Friday的时候，低价买了一块三星的860 EVO的1TB SSD来扩容我的计算机存储。</p>
-    <p>大概是因为计算机的设备总量增加了，对系统的电力提出了更高的挑战，而外置的电源适配器又是20V × 3.25A ＝ 65W的直流输出，从物理上决定了功率的上限。</p>
-    <p>近一个月以来，或许是Bilibili与Acfun之类的网站的视频压制格式出现了变化，也或许是Firefox内置的解码器出现了更新，已经出现至少四次在播放视频的过程中系统出现失去响应或者蓝屏后死机的故障。</p>
-    <p>通过调阅Event Viewer，发现死机前出现如下事件：</p>
-    <pre><code>    <span class="hljs-keyword">Event</span> ID <span class="hljs-number">37</span>
-    Source: Microsoft-Windows-Kernel-Processor-Power
-    <span class="hljs-keyword">Type</span>: Warning
-    Description:
-    The speed <span class="hljs-keyword">of</span> processorxin <span class="hljs-keyword">group</span> y <span class="hljs-keyword">is</span> being limited <span class="hljs-keyword">by</span> system firmware. The processor <span class="hljs-keyword">has</span> been <span class="hljs-keyword">in</span> this reduced performance state forz seconds since the last report.
-</code></pre>
-    <p>通过查阅微软的相关页面，并没有得到什么有用的信息，用hwmonitor_1.43来检测CPU的功耗，发现在开启了Turbo Mode的情况下，CPU瞬时功耗可以暴增到38W，大概是导致系统出现死机的罪魁祸首。</p>
-    <p>想来不是很能理解，毕竟Lenovo的整机按说也是做了出厂的测试的，不应该有这样的问题。</p>
-    <p>试着下载Intel Processor Diagnostic Tool 64bit，官网上的版本是<code>4.1.5.37.W.MP</code>，结果运行后第一秒就出现了IMC Fail：</p>
-    <pre><code>    -<span class="ruby">-- IPDT64 - <span class="hljs-symbol">Revision:</span> <span class="hljs-number">4.1</span>.<span class="hljs-number">5.37</span>
-</span>    -<span class="ruby">-- IPDT64 - Start <span class="hljs-symbol">Time:</span> <span class="hljs-number">4</span>/<span class="hljs-number">10</span>/<span class="hljs-number">2021</span> <span class="hljs-number">10</span><span class="hljs-symbol">:</span><span class="hljs-number">55</span><span class="hljs-symbol">:</span><span class="hljs-number">11</span> AM
-</span>
-    System Information
-    -<span class="ruby">-----------------
-</span>    Processor Name: Intel(R) Core(TM) i7-6700T CPU @ 2.80GHz
-    Processor Information: Family 6 Model 5E Stepping 3
-    Number of Physical Cores: 4
-    Number of Logical Cores: 8
-    Operating System: Microsoft Windows 7 Professional 64-bit
-    Graphics Information: Intel(R) HD Graphics 530
-    -<span class="ruby">---------------------------------------------
-</span>    -<span class="ruby">- Testing
-</span>    -<span class="ruby">---------------------------------------------
-</span>    CPU 1 - Genuine Intel - Pass.
-    CPU 1 - BrandString - Pass.
-    CPU 1 - Cache - Pass.
-    CPU 1 - MMXSSE - Pass.
-    CPU 1 - IMC - Fail.
 
-    IPDT64 Failed
-    -<span class="ruby">-- IPDT64 - <span class="hljs-symbol">Revision:</span> <span class="hljs-number">4.1</span>.<span class="hljs-number">5.37</span>
-</span>    -<span class="ruby">-- IPDT64 - End <span class="hljs-symbol">Time:</span> <span class="hljs-number">4</span>/<span class="hljs-number">10</span>/<span class="hljs-number">2021</span> <span class="hljs-number">10</span><span class="hljs-symbol">:</span><span class="hljs-number">55</span><span class="hljs-symbol">:</span><span class="hljs-number">12</span> AM</span>
-</code></pre>
-    <p>继续搜索，发现有人说他升级了主板BIOS就好了。我虽然有过曾经升级过BIOS导致各种随机死机，不得不又把BIOS降回去的不愉快的经验，但还是决定依法照做。</p>
-    <p>去Lenovo官网查找BIOS的升级，看到2021年又出了新版的BIOS，出于对厂家工程师办事的信任，就咬咬牙升了，升完怀着期待的心情又跑了一遍IPDT，结果测试还是fail。</p>
-    <p>又搜索，看到有人说这是因为最新的ICDT跟老CPU不兼容，用老版本的跑一遍就行，结果我找遍了Intel的官网，又找遍了整个互联网，根本找不到哪里有老版本的ICDT下载。</p>
-    <p>又看到有些人声称，在兼容模式中Windows 7来运行就可以通过测试，试了一下，结果ICDT拒绝启动，说该版本的操作系统不支持。</p>
-    <p>那就还是让实践检验真理吧，最后跑了一遍系统自带的Windows Memory Diagnostics
-        Tool，重启之后做完测试，没有遇到错误，决定先从BIOS里面把SpeedStep和Turbo关了继续用一阵子，看看死机不死机再说。
-    </p>
-    <p>这几天又迷上了VS Code，装上了PEP8之后，对Python的代码格式化真心好用啊，变得特别美观了。</p>
-    <p>又用Shift + Alt + I的组合学会了同时操作多行。这下在合并多个视频文件的时候可就方便太多了。</p>
-    <p>又学了一点Markdown和HTML转化的小技巧，准备下一步尝试用Github Page的功能来写做一点简单的HTML页面。</p>
+    <body>
+        <div class="home">
+            <div class="content">
+                <div class="stars"></div>
+                <img class="bgc" src="./imgs38.jpg" width="100%" alt="">
+                <h3 class="title">欢迎来到我的个人网站</h3>
+                <h3 class="titles">今天也要加油鸭</h3>
+                <div class='ribbon'>
+                    <a href='./index.html'><span>首页</span></a>
+                    <a href='./about.html'><span>2021年折腾记录</span></a>
+                    <a href='./form.html'><span>妈呀，这不是你！</span></a>
+                </div>
 
-</body>
+            </div>
+            <div class="icons">
+                <div class="icons_items">
+                    <img class="icons_items_imgs" src="./xuexiao.png" alt="">
+                    <span>教学楼是我们每天必去取经之地</span>
+                </div>
+                <div class="icons_items">
+                    <img class="icons_items_imgs" src="./canting.png" alt="">
+                    <span>每天都要在食堂里面纠结到底吃什么</span>
+                </div>
+                <div class="icons_items">
+                    <img class="icons_items_imgs" src="./fengjing.png" alt="">
+                    <span>午饭过后可以躺着休息晒晒太阳的小山坡</span>
+                </div>
+                <div class="icons_items">
+                    <img class="icons_items_imgs" src="./yewan.png" alt="">
+                    <span>忙碌的一天结束啦爬上小床跟世界说晚安</span>
+                </div>
+            </div>
+            <div class="introduce">
+                <div class="introduce_item">
+                    <img class="introduce_item_img" src="./imgs15.jpg" alt="">
+                    <span class="introduce_item_title">天空还是一片浅蓝,转眼间东方出现了一道红霞,红霞慢慢地在扩大，不大一会就染红了小半边天。颜色红得可爱， 又
+                        过了一会儿,在那个地方出现了太阳的小半边脸。</span>
+
+                </div>
+                <div class="introduce_item">
+
+                    <span
+                        class="introduce_item_titles">当清晨的阳光洒进我们温馨的寝室，忙碌的一天又开始了，闹钟开始响起，每个人睡眼惺忪，从床上爬起，忙忙碌碌的穿梭在食堂与教室之间</span>
+                    <img class="introduce_item_img" src="./imgs36.jpg" alt="">
+                </div>
+                <div class="introduce_item">
+                    <img class="introduce_item_img" src="./imgs16.jpg" alt="">
+                    <span
+                        class="introduce_item_title">温暖的阳光照耀着大地，远处的小山都金灿灿的美轮美奂，它穿梭于微隙的气息。舒倘，漫长。紫檀的香味，弥漫在春日，把天地间一切空虚盈满，阳光下，是一道纤绝的尘陌，呢喃着天真，充盈着那抹曾经深不可测的孤清而飘逸的影。</span>
+                </div>
+                <div class="introduce_item">
+                    <span
+                        class="introduce_item_titles">当晚自习结束后，抬头望向天空，几颗大而亮的星星挂在夜空，仿佛是天上的人儿提着灯笼在巡视那浩瀚的太空。美丽极了，裹紧衣裳，在这优美的夜色中慢慢的走回寝室。</span>
+                    <img class="introduce_item_img" src="./imgs14.jpg" alt="">
+                </div>
+            </div>
+
+
+    </body>
 
 </html>
