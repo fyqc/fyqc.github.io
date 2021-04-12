@@ -43,6 +43,7 @@
             color: white;
             font-size: 1.25em;
             font-weight: 500;
+            height: min-content;
             margin: 0 auto;
             padding-top: 13rem;
             text-align: center;
@@ -101,7 +102,6 @@
                 transform: translateZ(200px);
                 opacity: .8;
             }
-
         }
 
         .ribbon {
@@ -184,6 +184,7 @@
             margin: auto;
             display: flex;
             justify-content: space-between;
+            font-size: 1.3rem;
         }
 
         #icon_1 {
@@ -246,6 +247,7 @@
             align-self: center;
             padding-right: 1.25rem;
         }
+
         #footer {
             /* 添加clear:both意味着布局footer前清除作用在它身上的浮动效果 */
             /* 意味着footer不按照之前的浮动布局 */
@@ -263,77 +265,77 @@
 <body>
 
 
-<div id="container">
+    <div id="container">
 
-    <div class="header">
-
-        <div class="ribbon">
-            <a href="./index.html"><span>首页</span></a>
-            <a href="./2021.html"><span>2021年折腾记录</span></a>
-            <a href="./about.html"><span>妈呀，这不是你！</span></a>
-        </div>
-        <div id="header_text">
-            <div>
-                <h3>欢迎来到我的个人网站</h3>
-            </div>
-            <div>
-                <h5>今天也要加油鸭</h5>
-            </div>
-
-        </div>
-        <div class="home">
-            <div class="content">
-                <div class="stars">
+        <div class="header">
+            <div class="home">
+                <div class="content">
+                    <div class="stars">
+                    </div>
                 </div>
+                <div class="ribbon">
+                    <a href="./index.html"><span>首页</span></a>
+                    <a href="./2021.html"><span>2021年折腾记录</span></a>
+                    <a href="./about.html"><span>妈呀，这不是你！</span></a>
+                </div>
+                <div id="header_text">
+                    <div>
+                        <h3>欢迎来到我的个人网站</h3>
+                    </div>
+                    <div>
+                        <h5>今天也要加油鸭</h5>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="icons">
+            <div id="icon_1">
+                <img class="icons_items_imgs" src="./img/xuexiao.webp" alt="">
+                <span>教学楼是我们每天必去取经之地</span>
+            </div>
+            <div id="icon_2">
+                <img class="icons_items_imgs" src="./img/canting.webp" alt="">
+                <span>每天都要在食堂里面纠结到底吃什么</span>
+            </div>
+            <div id="icon_3">
+                <img class="icons_items_imgs" src="./img/fengjing.webp" alt="">
+                <span>午饭过后可以躺着休息晒晒太阳的小山坡</span>
+            </div>
+            <div id="icon_4">
+                <img class="icons_items_imgs" src="./img/yewan.webp" alt="">
+                <span>忙碌的一天结束啦爬上小床跟世界说晚安</span>
             </div>
         </div>
-    </div>
-    <div class="icons">
-        <div id="icon_1">
-            <img class="icons_items_imgs" src="./img/xuexiao.webp" alt="">
-            <span>教学楼是我们每天必去取经之地</span>
-        </div>
-        <div id="icon_2">
-            <img class="icons_items_imgs" src="./img/canting.webp" alt="">
-            <span>每天都要在食堂里面纠结到底吃什么</span>
-        </div>
-        <div id="icon_3">
-            <img class="icons_items_imgs" src="./img/fengjing.webp" alt="">
-            <span>午饭过后可以躺着休息晒晒太阳的小山坡</span>
-        </div>
-        <div id="icon_4">
-            <img class="icons_items_imgs" src="./img/yewan.webp" alt="">
-            <span>忙碌的一天结束啦爬上小床跟世界说晚安</span>
-        </div>
-    </div>
-    <div class="introduce">
-        <div class="introduce_item">
-            <img class="introduce_item_img" src="./img/imgs15.webp" alt="">
-            <span class="introduce_item_title">天空还是一片浅蓝,转眼间东方出现了一道红霞,红霞慢慢地在扩大，不大一会就染红了小半边天。颜色红得可爱， 又
-                过了一会儿,在那个地方出现了太阳的小半边脸。</span>
+        <div class="introduce">
+            <div class="introduce_item">
+                <img class="introduce_item_img" src="./img/imgs15.webp" alt="">
+                <span class="introduce_item_title">天空还是一片浅蓝,转眼间东方出现了一道红霞,红霞慢慢地在扩大，不大一会就染红了小半边天。颜色红得可爱， 又
+                    过了一会儿,在那个地方出现了太阳的小半边脸。</span>
 
-        </div>
-        <div class="introduce_item">
+            </div>
+            <div class="introduce_item">
 
-            <span
-                class="introduce_item_titles">当清晨的阳光洒进我们温馨的寝室，忙碌的一天又开始了，闹钟开始响起，每个人睡眼惺忪，从床上爬起，忙忙碌碌的穿梭在食堂与教室之间</span>
-            <img class="introduce_item_img" src="./img/imgs36.webp" alt="">
+                <span
+                    class="introduce_item_titles">当清晨的阳光洒进我们温馨的寝室，忙碌的一天又开始了，闹钟开始响起，每个人睡眼惺忪，从床上爬起，忙忙碌碌的穿梭在食堂与教室之间</span>
+                <img class="introduce_item_img" src="./img/imgs36.webp" alt="">
+            </div>
+            <div class="introduce_item">
+                <img class="introduce_item_img" src="./img/imgs16.webp" alt="">
+                <span
+                    class="introduce_item_title">温暖的阳光照耀着大地，远处的小山都金灿灿的美轮美奂，它穿梭于微隙的气息。舒倘，漫长。紫檀的香味，弥漫在春日，把天地间一切空虚盈满，阳光下，是一道纤绝的尘陌，呢喃着天真，充盈着那抹曾经深不可测的孤清而飘逸的影。</span>
+            </div>
+            <div class="introduce_item">
+                <span
+                    class="introduce_item_titles">当晚自习结束后，抬头望向天空，几颗大而亮的星星挂在夜空，仿佛是天上的人儿提着灯笼在巡视那浩瀚的太空。美丽极了，裹紧衣裳，在这优美的夜色中慢慢的走回寝室。</span>
+                <img class="introduce_item_img" src="./img/imgs14.webp" alt="">
+            </div>
         </div>
-        <div class="introduce_item">
-            <img class="introduce_item_img" src="./img/imgs16.webp" alt="">
-            <span
-                class="introduce_item_title">温暖的阳光照耀着大地，远处的小山都金灿灿的美轮美奂，它穿梭于微隙的气息。舒倘，漫长。紫檀的香味，弥漫在春日，把天地间一切空虚盈满，阳光下，是一道纤绝的尘陌，呢喃着天真，充盈着那抹曾经深不可测的孤清而飘逸的影。</span>
-        </div>
-        <div class="introduce_item">
-            <span
-                class="introduce_item_titles">当晚自习结束后，抬头望向天空，几颗大而亮的星星挂在夜空，仿佛是天上的人儿提着灯笼在巡视那浩瀚的太空。美丽极了，裹紧衣裳，在这优美的夜色中慢慢的走回寝室。</span>
-            <img class="introduce_item_img" src="./img/imgs14.webp" alt="">
+        <div id="footer">
+            &copy; 2021 fyqc.github.io
         </div>
     </div>
-    <div id="footer">
-        &copy; 2021 fyqc.github.io
-    </div>
-</div>
 
 
 </body>
