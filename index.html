@@ -5,11 +5,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>欢迎来到我的个人网站</title>
     <style>
-        * {
+        body {
             margin: 0;
-            padding: 0
+            padding: 0;
+            width: 63.75rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #container {
+            background-color: white;
+            width: 63.75rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .header {
+            padding: 0;
+            width: 63.75rem;
+            background-image: url(./img/imgs38.webp);
+            background-size: 63.75rem auto;
+            height: 35.85rem;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            margin: 0;
+            padding: 0.5rem;
+        }
+
+        .header #header_text {
+            color: white;
+            font-size: 1.25em;
+            font-weight: 500;
+            margin: 0 auto;
+            padding-top: 13rem;
+            text-align: center;
         }
 
         .home {
@@ -18,19 +54,9 @@
         }
 
         .content {
-            perspective: 340px;
+            perspective: 21.25rem;
             width: 100%;
             position: relative;
-        }
-
-        h1 {
-            color: white;
-            text-align: center;
-        }
-
-        span {
-            display: block;
-            text-align: center;
         }
 
         .stars {
@@ -75,76 +101,24 @@
                 transform: translateZ(200px);
                 opacity: .8;
             }
-        }
 
-        .title {
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            left: 0;
-            right: 0;
-            top: 300px;
-            margin: auto;
-            bottom: 0;
-            color: #fff;
-            font-size: 24px;
-            font-weight: 500;
-        }
-
-        .titles {
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            left: 0;
-            right: 0;
-            top: 350px;
-            margin: auto;
-            bottom: 0;
-            color: #fff;
-            font-size: 20px;
-            font-weight: 500;
-        }
-
-        .icon {
-            width: 15px;
-            height: 15px;
-            padding: 5px;
-            border: 2px solid #fff;
-            border-radius: 100%;
-            position: absolute;
-            left: 49%;
-            bottom: 50px;
-            animation: downs 2s linear infinite;
-        }
-
-        @keyframes downs {
-            from {
-                transform: translatey(0px);
-                opacity: .6;
-            }
-
-            to {
-                transform: translatey(30px);
-                opacity: .8;
-            }
         }
 
         .ribbon {
             display: flex;
             justify-content: center;
-            position: absolute;
-            right: 300px;
-            top: 50px;
+            position: top;
+            padding-top: 1.5rem;
             margin: auto;
         }
 
         .ribbon:after,
         .ribbon:before {
-            margin-top: 0.5em;
+            margin-top: 0.5rem;
             content: "";
             display: flex;
             ;
-            border: 1.5em solid #fff;
+            border: 1.5rem solid #fff;
         }
 
         .ribbon:after {
@@ -159,16 +133,16 @@
         .ribbon a:visited {
             color: #000;
             text-decoration: none;
-            height: 3.5em;
+            height: 3.5rem;
             overflow: hidden;
         }
 
         .ribbon span {
             background: #fff;
             display: inline-block;
-            line-height: 3em;
-            padding: 0 1.5em;
-            margin-top: 0.5em;
+            line-height: 3rem;
+            padding: 0 1.5rem;
+            margin-top: 0.5rem;
             position: relative;
             -webkit-transition: background-color 0.2s, margin-top 0.2s;
             /* Saf3.2+, Chrome */
@@ -189,19 +163,56 @@
         .ribbon span:before {
             content: "";
             position: absolute;
-            top: 3em;
+            top: 3rem;
             left: 0;
-            border-right: 0.5em solid #9B8651;
-            border-bottom: 0.5em solid #fff;
+            border-right: 0.5rem solid #9B8651;
+            border-bottom: 0.5rem solid #fff;
         }
 
         .ribbon span:after {
             content: "";
             position: absolute;
-            top: 3em;
+            top: 3rem;
             right: 0;
-            border-left: 0.5em solid #9B8651;
-            border-bottom: 0.5em solid #fff;
+            border-left: 0.5rem solid #9B8651;
+            border-bottom: 0.5rem solid #fff;
+        }
+
+        .icons {
+            text-align: center;
+            align-items: center;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #icon_1 {
+            display: inline-block;
+            vertical-align: top;
+            width: 15rem;
+        }
+
+        #icon_2 {
+            display: inline-block;
+            vertical-align: top;
+            width: 15rem;
+        }
+
+        #icon_3 {
+            display: inline-block;
+            vertical-align: top;
+            width: 15rem;
+        }
+
+        #icon_4 {
+            display: inline-block;
+            vertical-align: top;
+            width: 15rem;
+        }
+
+        span {
+            display: block;
+            text-align: center;
         }
 
         .introduce {
@@ -212,128 +223,119 @@
         .introduce_item {
             display: flex;
             justify-content: center;
-            margin-top: 60px;
+            margin-top: 2.75rem;
         }
 
         .introduce_item_img {
-            width: 800px;
-            height: 500px;
+            width: 42rem;
+            height: auto;
         }
 
         .introduce_item_title {
-            width: 300px;
-            font-size: 18px;
-            line-height: 36px;
+            width: 18rem;
+            font-size: 1.125rem;
+            line-height: 2.25rem;
             align-self: center;
-            padding-left: 100px;
+            padding-left: 1.25rem;
         }
 
         .introduce_item_titles {
-            width: 300px;
-            font-size: 18px;
-            line-height: 36px;
+            width: 18rem;
+            font-size: 1.125rem;
+            line-height: 2.25rem;
             align-self: center;
-            padding-right: 100px;
+            padding-right: 1.25rem;
         }
-
-        audio {
-            position: fixed;
-            bottom: 50px;
-            right: 0;
-        }
-
-        .music_img {
-            position: fixed;
-            bottom: 50px;
-            right: 50px;
-            width: 40px;
-            height: 30px;
-            animation: muscis 5s linear infinite;
-        }
-
-        .icons {
-            display: flex;
-            justify-content: space-between;
-            padding: 0 400px;
-            box-sizing: border-box;
-            overflow: hidden;
-        }
-
-        .icons_items {
-            display: flex;
-            flex-direction: column;
-            font-size: 20px;
-            margin-top: 80px;
-            width: 200px;
-        }
-
-        .icons_items_imgs {
-            width: 200px;
-            margin-bottom: 30px;
+        #footer {
+            /* 添加clear:both意味着布局footer前清除作用在它身上的浮动效果 */
+            /* 意味着footer不按照之前的浮动布局 */
+            clear: both;
+            /* 再给footer设置10px内边距 */
+            padding: 1.5rem;
+            color: #666;
+            /* 文本居右 */
+            text-align: right;
         }
     </style>
+
 </head>
 
 <body>
 
-    <body>
+
+<div id="container">
+
+    <div class="header">
+
+        <div class="ribbon">
+            <a href="./index.html"><span>首页</span></a>
+            <a href="./2021.html"><span>2021年折腾记录</span></a>
+            <a href="./about.html"><span>妈呀，这不是你！</span></a>
+        </div>
+        <div id="header_text">
+            <div>
+                <h3>欢迎来到我的个人网站</h3>
+            </div>
+            <div>
+                <h5>今天也要加油鸭</h5>
+            </div>
+
+        </div>
         <div class="home">
             <div class="content">
-                <div class="stars"></div>
-                <img class="bgc" src="./imgs38.jpg" width="100%" alt="">
-                <h3 class="title">欢迎来到我的个人网站</h3>
-                <h3 class="titles">今天也要加油鸭</h3>
-                <div class='ribbon'>
-                    <a href='./index.html'><span>首页</span></a>
-                    <a href='./about.html'><span>2021年折腾记录</span></a>
-                    <a href='./form.html'><span>妈呀，这不是你！</span></a>
-                </div>
-
-            </div>
-            <div class="icons">
-                <div class="icons_items">
-                    <img class="icons_items_imgs" src="./xuexiao.png" alt="">
-                    <span>教学楼是我们每天必去取经之地</span>
-                </div>
-                <div class="icons_items">
-                    <img class="icons_items_imgs" src="./canting.png" alt="">
-                    <span>每天都要在食堂里面纠结到底吃什么</span>
-                </div>
-                <div class="icons_items">
-                    <img class="icons_items_imgs" src="./fengjing.png" alt="">
-                    <span>午饭过后可以躺着休息晒晒太阳的小山坡</span>
-                </div>
-                <div class="icons_items">
-                    <img class="icons_items_imgs" src="./yewan.png" alt="">
-                    <span>忙碌的一天结束啦爬上小床跟世界说晚安</span>
+                <div class="stars">
                 </div>
             </div>
-            <div class="introduce">
-                <div class="introduce_item">
-                    <img class="introduce_item_img" src="./imgs15.jpg" alt="">
-                    <span class="introduce_item_title">天空还是一片浅蓝,转眼间东方出现了一道红霞,红霞慢慢地在扩大，不大一会就染红了小半边天。颜色红得可爱， 又
-                        过了一会儿,在那个地方出现了太阳的小半边脸。</span>
+        </div>
+    </div>
+    <div class="icons">
+        <div id="icon_1">
+            <img class="icons_items_imgs" src="./img/xuexiao.webp" alt="">
+            <span>教学楼是我们每天必去取经之地</span>
+        </div>
+        <div id="icon_2">
+            <img class="icons_items_imgs" src="./img/canting.webp" alt="">
+            <span>每天都要在食堂里面纠结到底吃什么</span>
+        </div>
+        <div id="icon_3">
+            <img class="icons_items_imgs" src="./img/fengjing.webp" alt="">
+            <span>午饭过后可以躺着休息晒晒太阳的小山坡</span>
+        </div>
+        <div id="icon_4">
+            <img class="icons_items_imgs" src="./img/yewan.webp" alt="">
+            <span>忙碌的一天结束啦爬上小床跟世界说晚安</span>
+        </div>
+    </div>
+    <div class="introduce">
+        <div class="introduce_item">
+            <img class="introduce_item_img" src="./img/imgs15.webp" alt="">
+            <span class="introduce_item_title">天空还是一片浅蓝,转眼间东方出现了一道红霞,红霞慢慢地在扩大，不大一会就染红了小半边天。颜色红得可爱， 又
+                过了一会儿,在那个地方出现了太阳的小半边脸。</span>
 
-                </div>
-                <div class="introduce_item">
+        </div>
+        <div class="introduce_item">
 
-                    <span
-                        class="introduce_item_titles">当清晨的阳光洒进我们温馨的寝室，忙碌的一天又开始了，闹钟开始响起，每个人睡眼惺忪，从床上爬起，忙忙碌碌的穿梭在食堂与教室之间</span>
-                    <img class="introduce_item_img" src="./imgs36.jpg" alt="">
-                </div>
-                <div class="introduce_item">
-                    <img class="introduce_item_img" src="./imgs16.jpg" alt="">
-                    <span
-                        class="introduce_item_title">温暖的阳光照耀着大地，远处的小山都金灿灿的美轮美奂，它穿梭于微隙的气息。舒倘，漫长。紫檀的香味，弥漫在春日，把天地间一切空虚盈满，阳光下，是一道纤绝的尘陌，呢喃着天真，充盈着那抹曾经深不可测的孤清而飘逸的影。</span>
-                </div>
-                <div class="introduce_item">
-                    <span
-                        class="introduce_item_titles">当晚自习结束后，抬头望向天空，几颗大而亮的星星挂在夜空，仿佛是天上的人儿提着灯笼在巡视那浩瀚的太空。美丽极了，裹紧衣裳，在这优美的夜色中慢慢的走回寝室。</span>
-                    <img class="introduce_item_img" src="./imgs14.jpg" alt="">
-                </div>
-            </div>
+            <span
+                class="introduce_item_titles">当清晨的阳光洒进我们温馨的寝室，忙碌的一天又开始了，闹钟开始响起，每个人睡眼惺忪，从床上爬起，忙忙碌碌的穿梭在食堂与教室之间</span>
+            <img class="introduce_item_img" src="./img/imgs36.webp" alt="">
+        </div>
+        <div class="introduce_item">
+            <img class="introduce_item_img" src="./img/imgs16.webp" alt="">
+            <span
+                class="introduce_item_title">温暖的阳光照耀着大地，远处的小山都金灿灿的美轮美奂，它穿梭于微隙的气息。舒倘，漫长。紫檀的香味，弥漫在春日，把天地间一切空虚盈满，阳光下，是一道纤绝的尘陌，呢喃着天真，充盈着那抹曾经深不可测的孤清而飘逸的影。</span>
+        </div>
+        <div class="introduce_item">
+            <span
+                class="introduce_item_titles">当晚自习结束后，抬头望向天空，几颗大而亮的星星挂在夜空，仿佛是天上的人儿提着灯笼在巡视那浩瀚的太空。美丽极了，裹紧衣裳，在这优美的夜色中慢慢的走回寝室。</span>
+            <img class="introduce_item_img" src="./img/imgs14.webp" alt="">
+        </div>
+    </div>
+    <div id="footer">
+        &copy; 2021 fyqc.github.io
+    </div>
+</div>
 
 
-    </body>
+</body>
 
 </html>
