@@ -21,7 +21,35 @@ There are no plug-ins to install or configure. The audio or video downloads and 
     <title>Test Audio Play on iPhone</title>
 </head>
 <body>
-    <audio src="w20210520.mp3" controls></audio>
+    <audio src="w20210520.mp3" id="CW" autoplay preload></audio>
+
+    <script>    $(function () {
+            audioAutoPlay('CW');
+        });
+
+        function audioAutoPlay(id) {
+
+            var audio = document.getElementById(id),
+                play = function () {
+                    audio.play();
+                    document.removeEventListener("touchstart", play, false);
+                };
+
+            audio.play();
+
+            //兼容微信
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                play();
+            }, false);
+
+            //兼容易信
+            document.addEventListener('YixinJSBridgeReady', function () {
+                play();
+            }, false);
+
+            document.addEventListener("touchstart", play, false);
+        }
+    </script>
     <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique omnis molestiae asperiores at, nobis odit ad possimus quia corporis. Ab cum esse repudiandae. Nihil ipsam error quis corrupti, perferendis tenetur!</span>
 </body>
 </html>
