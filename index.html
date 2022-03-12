@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="7ozOgsvx6eTUSUqTjuVtD3Xdfm-I1IN7VVwtHNGZpIY" />
     <title>欢迎来到我的个人网站</title>
     <style>
         body {
+            font-family: Georgia, -apple-system, 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 
+            'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;
             margin: 0;
             padding: 0;
             width: 63.75rem;
@@ -106,77 +107,22 @@
         }
 
         .ribbon {
+            -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+            background: rgba(216, 214, 213, 0.1);
             display: flex;
-            justify-content: center;
+            justify-content: right;
             position: top;
-            padding-top: 1.5rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
             margin: auto;
         }
 
-        .ribbon:after,
-        .ribbon:before {
-            margin-top: 0.5rem;
-            content: "";
-            display: flex;
-            ;
-            border: 1.5rem solid #fff;
-        }
-
-        .ribbon:after {
-            border-right-color: transparent;
-        }
-
-        .ribbon:before {
-            border-left-color: transparent;
-        }
-
-        .ribbon a:link,
-        .ribbon a:visited {
-            color: #000;
+        .ribbon a {
             text-decoration: none;
-            height: 3.5rem;
-            overflow: hidden;
-        }
-
-        .ribbon span {
-            background: #fff;
-            display: inline-block;
-            line-height: 3rem;
-            padding: 0 1.5rem;
-            margin-top: 0.5rem;
-            position: relative;
-            -webkit-transition: background-color 0.2s, margin-top 0.2s;
-            /* Saf3.2+, Chrome */
-            -moz-transition: background-color 0.2s, margin-top 0.2s;
-            /* FF4+ */
-            -ms-transition: background-color 0.2s, margin-top 0.2s;
-            /* IE10 */
-            -o-transition: background-color 0.2s, margin-top 0.2s;
-            /* Opera 10.5+ */
-            transition: background-color 0.2s, margin-top 0.2s;
-        }
-
-        .ribbon a:hover span {
-            background: #FFD204;
-            margin-top: 0;
-        }
-
-        .ribbon span:before {
-            content: "";
-            position: absolute;
-            top: 3rem;
-            left: 0;
-            border-right: 0.5rem solid #9B8651;
-            border-bottom: 0.5rem solid #fff;
-        }
-
-        .ribbon span:after {
-            content: "";
-            position: absolute;
-            top: 3rem;
-            right: 0;
-            border-left: 0.5rem solid #9B8651;
-            border-bottom: 0.5rem solid #fff;
+            color: orange;
+            margin-right: 2rem;
+            font-size: 1.2rem;
         }
 
         .icons {
@@ -251,13 +197,9 @@
         }
 
         #footer {
-            /* 添加clear:both意味着布局footer前清除作用在它身上的浮动效果 */
-            /* 意味着footer不按照之前的浮动布局 */
             clear: both;
-            /* 再给footer设置10px内边距 */
             padding: 1.5rem;
             color: #666;
-            /* 文本居右 */
             text-align: right;
         }
     </style>
@@ -265,10 +207,7 @@
 </head>
 
 <body>
-
-
     <div id="container">
-
         <div class="header">
             <div class="home">
                 <div class="content">
@@ -276,9 +215,9 @@
                     </div>
                 </div>
                 <div class="ribbon">
-                    <a href="./index.html"><span>首页</span></a>
-                    <a href="./2021.html"><span>2021年折腾记录</span></a>
-                    <a href="./2020.html"><span>2020折腾记录</span></a>
+                    <a href="./2022.html"><span>2022年</span></a>
+                    <a href="./2021.html"><span>2021年</span></a>
+                    <a href="./2020.html"><span>2020年</span></a>
                 </div>
                 <div id="header_text">
                     <div>
@@ -288,9 +227,7 @@
                         <h5>今天也要加油鸭</h5>
                     </div>
                 </div>
-
             </div>
-
         </div>
         <div class="icons">
             <div id="icon_1">
@@ -315,10 +252,8 @@
                 <img class="introduce_item_img" src="./img/imgs15.webp" alt="">
                 <span class="introduce_item_title">天空还是一片浅蓝,转眼间东方出现了一道红霞,红霞慢慢地在扩大，不大一会就染红了小半边天。颜色红得可爱， 又
                     过了一会儿,在那个地方出现了太阳的小半边脸。</span>
-
             </div>
             <div class="introduce_item">
-
                 <span
                     class="introduce_item_titles">当清晨的阳光洒进我们温馨的寝室，忙碌的一天又开始了，闹钟开始响起，每个人睡眼惺忪，从床上爬起，忙忙碌碌的穿梭在食堂与教室之间</span>
                 <img class="introduce_item_img" src="./img/imgs36.webp" alt="">
@@ -335,11 +270,9 @@
             </div>
         </div>
         <div id="footer">
-            &copy; 2021 fyqc.github.io
+            &copy; 2022 fyqc.github.io
         </div>
     </div>
-
-
 </body>
 
 </html>
