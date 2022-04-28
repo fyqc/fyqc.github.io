@@ -1,0 +1,49 @@
+nav a {
+	font-family: Helvetica, Tahoma, STKaiti;
+	color: #e98b2a;
+	text-decoration: underline;
+	text-underline-offset: 4px;
+	margin: 0px 5px;
+}
+/* 
+a {
+	color: #0B346E;
+} */
+
+.projects-description{
+	color: #828282;
+}
+
+#self-statement h1 {
+	font-family: STKaiti;
+}
+
+#self-statement {
+	font-family: STKaiti;
+	font-size: 22px;
+}
+
+#self-statement p {
+	margin: 5% auto;
+}
+
+body {
+	font-family: Garamond, Helvetica, Tahoma, serif;
+	margin: auto;
+	padding: 18px;
+	max-width: 600px;
+	font-size: 18px;
+	text-align: left;
+	background-color: white;
+	position: relative;
+}
+
+img,
+video {
+	max-width: 600px;
+	border: 2px solid #eba613;
+}
+
+.emoji {
+	font-weight: initial !important;
+}
