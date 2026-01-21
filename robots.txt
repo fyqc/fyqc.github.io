@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fyqc.github.io/sitemap.txt
