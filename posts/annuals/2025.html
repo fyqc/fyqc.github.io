@@ -1,169 +1,190 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>2025年折腾记录</title>
     <meta name="description" content="2025年的年度总结，创建于2026年">
-    <meta name="keywords" content="年度总结, 个人文章, 吐槽">
+    <meta name="keywords" content="年度总结, 个人文章, 吐槽, 方小">
     <meta name="author" content="方小">
+    
     <link rel="apple-touch-icon" sizes="180x180" href="../../img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon/favicon-16x16.png">
+
     <style>
         :root {
-            --bg-color: #f9f7f2;
-            /* 类似纸张的米白色，护眼且有质感 */
-            --text-color: #2c3e50;
-            /* 深灰蓝色，比纯黑更柔和 */
-            --accent-color: #8c7851;
-            /* 沉稳的金色/古铜色，用于装饰 */
-            --quote-bg: #f0ede5;
+            /* 配色：暖调米白 + 深炭灰 + 古铜金 */
+            --bg-color: #fdfbf7;
+            --text-primary: #2b2b2b;
+            --text-secondary: #666;
+            --accent-color: #9e8c6b;
+            --link-hover: #b35c2e;
+            --quote-bg: #f4f1ea;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
             background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: "Georgia", "Source Han Serif SC", "Songti SC", serif;
-            /* 优先使用衬线体，更有文学感 */
-            line-height: 1.9;
-            /* 纯文字需要更大的行高 */
+            color: var(--text-primary);
+            /* 字体核心优化：
+               1. 优先使用系统自带的高质量衬线体 (Georgia, Times)
+               2. 中文优先 Mac 的 Songti/STSong
+               3. Windows 下尝试 Noto Serif (如果用户有安装) 或 新宋体
+               4. 最后才是通用的 serif
+            */
+            font-family: "Georgia", "Times New Roman", "Songti SC", "Noto Serif SC", "SimSun", serif;
+            line-height: 1.75;
             margin: 0;
+            padding: 0;
+            /* 字体抗锯齿，让文字在屏幕上更清晰、略细 */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
         }
 
         #container {
-            max-width: 42rem;
-            /* 进一步收窄，单行字数控制在最佳阅读范围 */
-            padding: 10% 2rem;
+            max-width: 40rem; /* 约 640px，这是中文阅读的最佳宽度 */
             margin: 0 auto;
+            padding: 4rem 1.5rem 6rem;
         }
 
-        /* 标题：大方、居中、带有年代感 */
-        h1 {
-            text-align: center;
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 4rem;
-            color: var(--text-color);
-        }
-
-        /* 小节标题：打破沉闷的关键 */
-        h2 {
-            font-size: 1.4rem;
-            margin-top: 4rem;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-        }
-
-        h2::before {
-            content: "§";
-            /* 使用章节符号作为装饰 */
-            margin-right: 0.8rem;
-            color: var(--accent-color);
-            font-size: 1.2rem;
-        }
-
-        /* 正文：强调可读性 */
-        p {
-            margin-bottom: 2rem;
-            text-align: justify;
-            /* 中文两端对齐非常重要 */
-            hyphens: auto;
-        }
-
-        /* 引用：如果总结里有感悟或金句 */
-        blockquote {
-            margin: 3rem 0;
-            padding: 1.5rem 2rem;
-            background-color: var(--quote-bg);
-            border-left: 2px solid var(--accent-color);
-            font-style: italic;
-            font-size: 1.05rem;
-        }
-
-        /* 导航条整体设计 */
+        /* -------------------
+           导航与页脚
+           ------------------- */
         nav {
+            text-align: center;
             margin-bottom: 5rem;
-            /* 与下方标题拉开距离 */
-            display: flex;
-            justify-content: center;
-            /* 居中显示 */
-            position: relative;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif; /* 导航用无衬线体，形成对比 */
         }
 
         nav a {
             color: var(--accent-color);
             text-decoration: none;
-            font-size: 0.9rem;
-            letter-spacing: 0.15rem;
-            padding: 0.5rem 1rem;
-            transition: all 0.4s ease;
-            position: relative;
-            opacity: 0.7;
-        }
-
-        /* 悬停时的视觉反馈：下划线从中间向两边延展 */
-        nav a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1px;
-            bottom: 0;
-            left: 50%;
-            background-color: var(--accent-color);
-            transition: all 0.4s ease;
-            transform: translateX(-50%);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding-bottom: 2px;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
         }
 
         nav a:hover {
-            opacity: 1;
-            color: var(--text-color);
+            color: var(--link-hover);
+            border-bottom-color: var(--link-hover);
         }
 
-        nav a:hover::after {
-            width: 60%;
-            /* 悬停时显示一截短线，不过于张扬 */
-        }
-
-        /* 底部返回链接样式 */
-        .back-home {
-            display: block;
-            text-align: center;
+        footer.back-home {
             margin-top: 6rem;
-            /* 与正文保持足够距离 */
+            text-align: center;
             padding-top: 2rem;
-            border-top: 1px double var(--accent-color);
-            /* 增加一条复古的双线细分割线 */
-            font-size: 0.9rem;
+            border-top: 1px solid rgba(0,0,0,0.05); /* 极淡的分割线 */
         }
 
-        .back-home a {
-            color: var(--accent-color);
+        footer.back-home a {
+            color: var(--text-secondary);
             text-decoration: none;
+            font-size: 0.9rem;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            transition: color 0.3s;
+        }
+        footer.back-home a:hover {
+            color: var(--link-hover);
+        }
+
+        /* -------------------
+           排版系统
+           ------------------- */
+        h1 {
+            text-align: center;
+            font-size: 2.4rem;
+            font-weight: normal; /* 不用加粗，宋体大字号本身很有分量 */
+            margin-bottom: 4rem;
             letter-spacing: 0.2rem;
-            transition: all 0.3s ease;
-            opacity: 0.8;
+            color: #000;
         }
 
-        .back-home a:hover {
-            opacity: 1;
-            letter-spacing: 0.4rem;
-            /* 悬停时字间距微微扩大，更有灵动感 */
-            color: var(--text-color);
+        section {
+            margin-bottom: 4rem; /* 增加板块间距 */
         }
 
-        /* 针对移动端的微调 */
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            position: relative;
+            display: inline-block;
+        }
+        
+        /* 装饰性的小符号，代替原来的 § */
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            vertical-align: middle;
+            margin-right: 12px;
+            margin-bottom: 2px;
+            opacity: 0.6;
+        }
+
+        p {
+            margin-bottom: 1.8rem;
+            text-align: justify;
+            text-justify: inter-ideograph; /* 解决中文两端对齐的标点问题 */
+            word-break: break-all; /* 防止长英文单词撑破布局 */
+        }
+
+        /* 引用块设计 */
+        blockquote {
+            margin: 2.5rem 0;
+            padding: 1.5rem 2rem;
+            background-color: var(--quote-bg);
+            border-left: 3px solid var(--accent-color);
+            color: var(--text-secondary);
+            font-family: "KaiTi", "STKaiti", serif; /* 引用使用楷体，模拟手写感 */
+            font-size: 1.05rem;
+            line-height: 1.8;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        blockquote p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 移动端适配 */
         @media (max-width: 600px) {
             #container {
-                padding-top: 15%;
-                max-width: 90%;
+                padding-top: 2rem;
             }
-
             h1 {
                 font-size: 1.8rem;
+                margin-bottom: 3rem;
             }
+            h2 {
+                font-size: 1.25rem;
+            }
+            blockquote {
+                padding: 1rem 1.2rem;
+                margin: 2rem -1rem; /* 移动端让引用块稍微宽一点 */
+                border-radius: 0;
+            }
+        }
+        
+        /* 打印优化 (如果有人想打印你的文章) */
+        @media print {
+            body { background: #fff; color: #000; }
+            nav, footer { display: none; }
+            #container { max-width: 100%; padding: 0; }
         }
     </style>
 </head>
